@@ -372,15 +372,7 @@ ul {
   font-size: 0.9rem;
 }
 
-/* Guide Container */
-#guide-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1001;
-  pointer-events: none;
-  /* Let clicks pass through */
-}
+/* Chloie styles removed */
 
 /* Animations */
 .fade-in {
