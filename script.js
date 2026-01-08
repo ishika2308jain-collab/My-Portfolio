@@ -229,10 +229,19 @@ class Guide {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Bubble's
-  const guide = new Guide('guide-container');
 
-  // Scroll Reveal Animation (Simple version)
+  // Initialize Bubbles in the new container
+  try {
+    console.log("Initializing Bubbles...");
+    const container = document.getElementById('bubbles-container');
+    console.log("Bubbles container:", container);
+
+    const guide = new Guide('bubbles-container');
+    console.log("Bubbles initialized:", guide);
+  } catch (e) {
+    console.error("Error initializing Bubbles:", e);
+  }
+
   const revealElements = document.querySelectorAll('.section, .timeline-item, .skill-card, .contact-item');
 
   // Add initial opacity 0 to items we want to reveal if not already handled by specific classes
@@ -253,4 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   revealElements.forEach(el => revealObserver.observe(el));
+
+  // Chloie removed
 });
